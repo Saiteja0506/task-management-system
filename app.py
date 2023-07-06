@@ -7,7 +7,7 @@ from s_token import token
 from key import salt1,salt2,secret_key
 from flask_session import Session
 from smail import sendmail
-mydb=mysql.connector.connect(host='localhost',user='root',password='admin',db='tms')
+#mydb=mysql.connector.connect(host='localhost',user='root',password='admin',db='tms')
 app=Flask(__name__)
 app.config['SESSION_TYPE']='filesystem'
 app.secret_key=secret_key
