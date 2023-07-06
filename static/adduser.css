@@ -1,0 +1,41 @@
+form{
+    position: absolute;
+    left:300px;
+}
+fieldset{
+    width:300px;
+    justify-content: center;
+    text-align: center;
+    background-color: burlywood;
+    border: 5px solid black;
+    margin-top:50%;
+    margin-left:100%;
+}
+legend{
+    background-color: aqua;
+    font-weight: bold;
+    font-size: larger;
+}
+label{
+    display: flex;
+    justify-content: center;
+    margin:10px;
+    font-weight:500;
+    font-size: 20px;
+}
+input{
+    text-align: center;
+    display:inline-block;
+    width:250px;
+    font-size: 20px;
+    margin-top:0;
+}
+button{
+    margin:20px;
+    background-color: rgb(79, 79, 221);
+    font-weight: bold;
+}
+textarea{
+    border:2px dashed black;
+    font-size: 15px;
+}

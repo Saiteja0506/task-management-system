@@ -1,0 +1,27 @@
+{% extends 'admhome.html' %}
+{% block addcss %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='adduser.css')}}">
+{% endblock %}
+{% block content %}
+    <form method="post">
+        <fieldset>
+            <legend>ADD TASK</legend>
+            <label for="taskid">TASK ID</label>
+            <input type="number" id="taskid" name="taskid" placeholder="enter taskid" required>
+            <label for="taskname">TASK NAME</label>
+            <input type="text" id="taskname" name="title" placeholder="enter task name" required>
+            <label>DUE DATE</label>
+            <input type="date" id="date" name="due_date" placeholder="enter due date" required>
+            <label for="usermail">ASSIGNED TO</label>
+            <input type="email" list="options" id="usermail" name="usermail">
+            <datalist id="options">
+                {% for i in data %}
+                    <option value="{{i[0]}}"></option>
+                {% endfor %}
+            </datalist>
+            <label for="description">DESCRIPTION</label>
+            <textarea rows="3" cols="26" name="description" id="description" placeholder="task description"></textarea><br>
+            <button type="submit">SUBMIT</button>
+        </fieldset>
+    </form>
+{% endblock %}

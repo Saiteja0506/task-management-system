@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(110, 206, 206);
+}
+fieldset{
+    border:5px solid black;
+    text-align: center;
+    width:50%;
+    margin-top: 200px;
+    margin-left: 300px;
+    padding:50px;
+    background-color: antiquewhite;
+}
+fieldset legend{
+    border:5px solid black;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color:whitesmoke;
+}
+fieldset label{
+    display:block;
+    font-size: 20px;
+    margin:10px;
+}
+fieldset input{
+    text-align: center;
+    display:inline-block;
+    width:250px;
+    font-size: 20px;
+}
+fieldset button{
+    background-color: rgb(131, 12, 243);
+    font-weight: bolder;
+}

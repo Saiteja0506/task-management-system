@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN HOME</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='userhome.css')}}">
+    {% block addcss %}{% endblock %}
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <b>DASHBOARD</b>
+            <a href="{{url_for('userlogout')}}" class="logout">LOGOUT</a>
+        </nav>
+    </div>
+    <h3>TASK TABLE STATUS</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Task id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>due date</th>
+            <th>assigned to</th>
+            <th>assigned by</th>
+            <th>Task status</th>
+            <th>UPDATE</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in data %}
+        <tr><form method="POST">
+            <td><input name="taskid" value={{i[0]}} readonly style="text-align: center;font-weight: bold;"></td>
+            <td>{{i[1]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[4]}}</td>
+            <td>{{i[5]}}</td>
+            <td>{{i[6]}}</td>
+            <td><input list="status" name="status">
+                <datalist id="status">
+                  <option value="not started">
+                  <option value="in progress">
+                  <option value="on hold">
+                  <option value="completed">
+                </datalist><br>
+                <input type="submit" value="update">
+            </td>
+            </form>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    {% block content %}{% endblock %}
+</body>
+</html>

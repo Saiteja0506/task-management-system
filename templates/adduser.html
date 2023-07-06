@@ -1,0 +1,20 @@
+{% extends 'admhome.html' %}
+{% block addcss %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='adduser.css')}}">
+{% endblock %}
+{% block content %}
+    <form method="post">
+        <fieldset>
+            <legend>ADD USER</legend>
+            <label for="username">USERNAME</label>
+            <input id="username" type="text" name="username" placeholder="enter username" required>
+            <label for="department">DEPARTMENT</label>
+            <input id="department" type="text" name="department" placeholder="enter department" required>
+            <label for="email">EMAIL</label>
+            <input id="email" name="usermail" type="email" placeholder="enter email id" required>
+            <label for="password">PASSWORD</label>
+            <input id="password" type="password" name="password" placeholder="enter password" required>
+            <button type="submit">SUBMIT</button>
+        </fieldset>
+    </form>
+{% endblock %}

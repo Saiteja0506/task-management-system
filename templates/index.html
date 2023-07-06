@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='index.css')}}">
+</head>
+<body>
+    <h1>TASK MANAGEMENT SYSTEM</h1>
+    <fieldset>
+        <legend>ADMIN</legend>
+        <a href="{{url_for('admreg')}}"><button>REGISTRATION</button></a>
+        <a href="{{url_for('admlog')}}"><button>LOGIN</button></a>
+    </fieldset>
+    <fieldset>
+        <legend>USER</legend>
+        <a href="{{url_for('userlog')}}"><button>LOGIN</button></a>
+    </fieldset>
+    <footer>
+        <address class="add"><b>Contact:</b><br>saitez bajinku<br>9493566227<br>JNTU-GV</address>
+        <a href="https://www.linkedin.com/in/saiteja-bajinku-4b5227206" class="linkdn">LINKEDIN</a>
+    </footer>
+</body>
+</html>

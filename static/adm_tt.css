@@ -1,0 +1,20 @@
+table{
+    position:relative;
+    left:250px;
+    border:2px solid black;
+}
+th{
+    padding:20px;
+    border:2px solid black;
+}
+td{
+    padding:10px;
+    border:2px solid black;
+    font-size:15px;
+}
+h3{
+    position: static;
+    text-align: center;
+    color:rgb(246, 49, 0);
+    width:100%;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN HOME</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='admhome.css')}}">
+    {% block addcss %}{% endblock %}
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <b>DASHBOARD</b>
+            <a href="{{url_for('adm_tt')}}" class="nav-item">Task Table</a>
+            <a href="{{url_for('adduser')}}" class="nav-item">Add User</a>
+            <a href="{{url_for('addtask')}}" class="nav-item">Add Task</a>
+            <a href="{{url_for('logout')}}" class="logout">LOGOUT</a>
+        </nav>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

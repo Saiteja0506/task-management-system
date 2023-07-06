@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN REGISTRATION</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='admreg.css')}}">
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <fieldset>
+        <legend>ADMIN REGISTRATION</legend>
+        <form method="post">
+            <label for="username">USERNAME</label>
+            <input id="username" type="text" name="username" placeholder="enter username" required>
+            <label for="password">PASSWORD</label>
+            <input id="password" type="password" name="password" placeholder="enter pasword" required>
+            <label for="email">EMAIL</label>
+            <input id="email" type="email" name="email" placeholder="enter email" required><br><br>
+            <button type="submit">REGISTER</button>
+            <p>Already have an account?<a href="{{url_for('admlog')}}">LOGIN</a></p>
+        </form>
+    </fieldset>
+</body>
+</html>

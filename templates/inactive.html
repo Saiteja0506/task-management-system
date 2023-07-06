@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inactive mail</title>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <p>your email status is not confirmed.If you want to proceed further then click resend to sent confirmation link to your email</p>
+    <a href="{{url_for('resend')}}"><button>RESEND</button></a><br>
+    <a href="{{url_for('logout')}}"><button>LOGOUT</button></a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'admhome.html' %}
+{% block addcss %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='adduser.css')}}">
+{% endblock %}
+{% block content %}
+<form method="post">
+    <fieldset>
+        <legend>UPDATE TASK</legend>
+        <label for="taskname">TASK NAME</label>
+        <input type="text" id="taskname" name="title" placeholder="enter task name" value="{{title}}">
+        <label for="date">DUE DATE</label>
+        <input type="date" id="date" name="due_date" placeholder="enter due date" value="{{due_date}}">
+        <label for="description">DESCRIPTION</label>
+        <textarea rows="3" cols="26" name="description" id="description" placeholder="task description">{{description}}</textarea><br>
+        <button type="submit">SUBMIT</button>
+    </fieldset>
+{% endblock %}
